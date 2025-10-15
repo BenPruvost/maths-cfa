@@ -1,3 +1,26 @@
+CREATE TABLE Livres
+(
+    NumLivre INT PRIMARY KEY NOT NULL,
+    NomLivre TEXT NOT NULL,
+    AuteurLivre TEXT NOT NULL,
+    EditeurLivre TEXT,
+    PrixLivre NUMERIC NOT NULL
+);
+
+CREATE TABLE Commandes
+(
+    NumCommande INT PRIMARY KEY NOT NULL,
+    DateCommande DATE,
+    NumLib INT
+);
+
+CREATE TABLE CommandeLivre
+(
+    NumLivre INT NOT NULL,
+    NumCommande INT NOT NULL,
+    QuantiteLivre INT
+);
+
 INSERT INTO Livres (NumLivre, NomLivre, AuteurLivre, EditeurLivre, PrixLivre)
     VALUES
         (1,"Astronomie et Astrophysique","Acker, Agnès","Dunod",45),
