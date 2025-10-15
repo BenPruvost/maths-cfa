@@ -1,0 +1,27 @@
+INSERT INTO Livres (NumLivre, NomLivre, AuteurLivre, EditeurLivre, PrixLivre)
+    VALUES
+        (1,"Astronomie et Astrophysique","Acker, Agnès","Dunod",45),
+        (2,"Brindlewood Bay","Cordova, Jason","Storyline",35),
+        (3,"Processus 7","Darlay, Christine","Nathan",24.9),
+        (4, "La Passe Miroir", "Dabos, Christelle", "Pôle Fiction", 9.4),
+        (5, "La Voie des Rois", "Sanderson, Brandon","Livre de Poche", 11.9),
+        (6,"Système d'information de gestion","Hudin, Oona","Dunod",39.9);
+        
+INSERT INTO Commandes (NumCommande, DateCommande, NumLib)
+    VALUES
+        (1, "2025/09/20",3),
+        (2, "2025/09/27",1),
+        (3, "2025/09/30",4),
+        (4, "2025/10/10",2),
+        (5, "2025/10/15",1);
+        
+INSERT INTO CommandeLivre (NumLivre, NumCommande, QuantiteLivre)
+    VALUES
+        (1, 1, 10),
+        (4, 1, 15),
+        (5, 2, 20),
+        (2, 3, 100),
+        (5, 3, 100),
+        (3, 4, 10),
+        (6, 4, 10),
+        (4, 5, 50);
